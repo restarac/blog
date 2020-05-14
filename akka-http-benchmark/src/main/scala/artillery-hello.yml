@@ -1,0 +1,14 @@
+config:
+  target: "http://localhost:8080"
+  http:
+    pool: 300
+  phases:
+     - duration: 60
+       arrivalRate: 10
+       rampTo: 100
+scenarios:
+  - flow:
+      - loop:
+          - get:
+              url: "/hello"
+        count: 1000
