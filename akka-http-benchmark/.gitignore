@@ -22,3 +22,4 @@ project/plugins/project/
 .settings/
 .classpath
 .project
+/.idea/

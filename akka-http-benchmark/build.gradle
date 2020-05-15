@@ -15,28 +15,19 @@ ext {
 }
 
 dependencies {
-	//Instrumentation
-	implementation 'io.kamon:kamon-bundle_2.12:2.1.0'
-	implementation 'io.kamon:kamon-prometheus_2.12:2.1.0'
-
     compile "org.scala-lang:scala-library:${scalaVersion}"
-    compile "com.typesafe.akka:akka-actor_${scalaVersion}:${akkaVersion}"
-    compile "com.typesafe.akka:akka-stream_${scalaVersion}:${akkaVersion}"
     compile "com.typesafe.akka:akka-http_${scalaVersion}:${akkaHttpVersion}"
-    compile "com.typesafe.akka:akka-http-spray-json_${scalaVersion}:${akkaHttpVersion}"
     compile "ch.qos.logback:logback-classic:1.2.3"
 
     testCompile "com.typesafe.akka:akka-testkit_${scalaVersion}:${akkaVersion}"
     testCompile "com.typesafe.akka:akka-http-testkit_${scalaVersion}:${akkaHttpVersion}"
-    testCompile "com.typesafe.akka:akka-stream-testkit_${scalaVersion}:${akkaVersion}"
     testCompile "org.scalatest:scalatest_${scalaVersion}:3.1.1"
     testCompile "org.scalamock:scalamock-scalatest-support_${scalaVersion}:3.6.0"
     testRuntime "org.pegdown:pegdown:1.1.0" //For scalatestPlugin
     testRuntimeOnly "com.vladsch.flexmark:flexmark-all:0.35.10"
-    //compile "com.typesafe.akka:akka-slf4j_2.13:${akkaHttpVersion}"
 }
 
 run {
-    mainClassName = 'ProxyServer4'
+    mainClassName = 'HelloWorldWebServer'
     standardInput = System.in
 }
